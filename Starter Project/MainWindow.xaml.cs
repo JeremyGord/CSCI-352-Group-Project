@@ -24,5 +24,12 @@ namespace Starter_Project
         {
             InitializeComponent();
         }
+
+        // Doesn't update textbox. Unknown
+        //private void SelectedDatesChanged(object sender, SelectionChangedEventArgs e)//RoutedEventArgs e)
+        //{
+            //myTextBox.Text = myCalendar.SelectedDates.ToString();
+            //Console.WriteLine(myCalendar.SelectedDates.ToString());
+        //}
     }
 }
