@@ -7,13 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" >
     <Grid>
-            <Calendar Name="Calender1" Margin="10,68,10,10">
+        <Viewbox
+    Width="600"
+    Stretch="Fill"
+    StretchDirection="Both" Margin="100,0,100,148">
+            <Calendar Name="Calender1" Height="168" Width="190" />
+        </Viewbox>
+        <Button x:Name="Button1" Content="Upload Image" HorizontalAlignment="Left" Margin="259,364,0,0" VerticalAlignment="Top" Width="120" Click="Button1_Click_1" />
+        <Button x:Name="Clear_Background" Content="Clear Image" HorizontalAlignment="Left" Margin="259,389,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" />
+        <TextBox x:Name="textbox1" HorizontalAlignment="Center"  Margin="0,341,0,0" Text="File path" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" TextChanged="TextBox_TextChanged"/>
+        <Button x:Name="Add_Event" Content="Add event" HorizontalAlignment="Left" Margin="24,394,0,0" VerticalAlignment="Top" Width="114" Click="Add_Event_Click"/>
 
-            </Calendar>
-            <Button x:Name="Button1" Content="Upload Image" HorizontalAlignment="Left" Margin="319,269,0,0" VerticalAlignment="Top" Width="120" Click="Button1_Click_1" />
-            <Button x:Name="Clear_Background" Content="Clear Image" HorizontalAlignment="Left" Margin="319,294,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" />
-            <TextBox x:Name="textbox1" HorizontalAlignment="Left"  Margin="319,246,0,0" Text="File path" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" TextChanged="TextBox_TextChanged"/>
-            <Button x:Name="Add_Event" Content="Add event" HorizontalAlignment="Left" Margin="24,394,0,0" VerticalAlignment="Top" Width="114" Click="Add_Event_Click"/>
-
-        </Grid>
-    </Window>
+    </Grid>
+</Window>
