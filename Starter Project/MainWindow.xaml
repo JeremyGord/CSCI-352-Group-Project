@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Starter_Project"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" >
@@ -17,6 +18,8 @@
         <Button x:Name="Clear_Background" Content="Clear Image" HorizontalAlignment="Left" Margin="259,389,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" />
         <TextBox x:Name="textbox1" HorizontalAlignment="Center"  Margin="0,341,0,0" Text="File path" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" TextChanged="TextBox_TextChanged"/>
         <Button x:Name="Add_Event" Content="Add event" HorizontalAlignment="Left" Margin="24,394,0,0" VerticalAlignment="Top" Width="114" Click="Add_Event_Click"/>
+        <TextBlock x:Name="Time" HorizontalAlignment="Left" Margin="700,10,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
+
 
     </Grid>
 </Window>

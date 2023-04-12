@@ -14,6 +14,7 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.IO;
 using System.Globalization;
+using System.Windows.Threading;
 
 namespace Starter_Project
 {
@@ -27,8 +28,13 @@ namespace Starter_Project
         public MainWindow()
         {
             InitializeComponent();
-
             DataContext = this;
+
+            DispatcherTimer timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
+            {
+                this.Time.Text = DateTime.Now.ToString("h:mm:ss:tt");
+            },
+            this.Dispatcher);
         }
 
 
