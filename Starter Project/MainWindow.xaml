@@ -7,7 +7,7 @@
         xmlns:local="clr-namespace:Starter_Project"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="800" >
-    <Grid>
+    <Grid Margin="0,0,0,3">
         <Viewbox
     Width="600"
     Stretch="Fill"
@@ -16,8 +16,7 @@
         </Viewbox>
         <Button x:Name="Button1" Content="Upload Image" HorizontalAlignment="Left" Margin="259,364,0,0" VerticalAlignment="Top" Width="120" Click="Button1_Click_1" />
         <Button x:Name="Clear_Background" Content="Clear Image" HorizontalAlignment="Left" Margin="259,389,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" />
-        <TextBox x:Name="textbox1" HorizontalAlignment="Center"  Margin="0,341,0,0" Text="File path" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" TextChanged="TextBox_TextChanged"/>
-        <Button x:Name="Add_Event" Content="Add event" HorizontalAlignment="Left" Margin="24,394,0,0" VerticalAlignment="Top" Width="114" Click="Add_Event_Click"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left"  Margin="259,326,0,0" Text="File path" TextWrapping="Wrap" VerticalAlignment="Top" Width="272" TextChanged="TextBox_TextChanged" Height="33"/>
         <TextBlock x:Name="Time" HorizontalAlignment="Left" Margin="670,47,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
         <Button x:Name="confirmevent" Content="Button" HorizontalAlignment="Left" Margin="710,457,0,7" Click="confirmevent_Click"/>
         <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="670,409,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
@@ -25,8 +24,7 @@
         <Button x:Name="Buttonyear" Content="Year" HorizontalAlignment="Left" Margin="750,432,0,0" VerticalAlignment="Top" Click="Buttonyear_Click"/>
         <Button x:Name="ButtonDay" Content="Day" HorizontalAlignment="Left" Margin="675,432,0,0" VerticalAlignment="Top" Click="day_Click"/>
         <TextBlock x:Name="testing" HorizontalAlignment="Left" Margin="473,418,0,0" TextWrapping="Wrap" Text="testingvariables" VerticalAlignment="Top"/>
-        <Button Content="Button" HorizontalAlignment="Left" Margin="675,311,0,0" VerticalAlignment="Top" Click="Button_Click_1"/>
 
 
     </Grid>
-    </Window>
+</Window>

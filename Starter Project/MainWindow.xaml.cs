@@ -71,12 +71,6 @@ namespace Starter_Project
             Calender1.Background = Brushes.White;
         }
 
-        private void Add_Event_Click(object sender, RoutedEventArgs e)
-        {
-            Window1 secondWindow = new Window1();
-            secondWindow.Show();
-        }
-
         private void confirmevent_Click(object sender, RoutedEventArgs e)
         {
             int i, j;
