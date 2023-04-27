@@ -71,7 +71,7 @@ namespace Starter_Project
             Calender1.Background = Brushes.White;
         }
 
-        private void confirmevent_Click(object sender, RoutedEventArgs e)
+        private void ConfirmEvent_Click_1(object sender, RoutedEventArgs e)
         {
             int i, j;
             int count = 0;
@@ -85,7 +85,7 @@ namespace Starter_Project
 
             if (Calender1.BlackoutDates.Contains(timer))
             {
-                MessageBox.Show("Your event is now");
+                MessageBox.Show("Your event is Today!");
                 for (j = 0; j < i; j++) {
                     if(events[j] != timer)
                     {
@@ -103,22 +103,15 @@ namespace Starter_Project
 
         private void ButtonMonth_Click(object sender, RoutedEventArgs e)
         {
-            month = Convert.ToInt32(textbox2.Text);
+            month = Convert.ToInt32(textbox3.Text);
         }
 
         private void Buttonyear_Click(object sender, RoutedEventArgs e)
         {
-            year = Convert.ToInt32(textbox2.Text);
-        }
-        private void Event()
-        {
+            year = Convert.ToInt32(textbox4.Text);
         }
 
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            
-        }
     }
 }
 
