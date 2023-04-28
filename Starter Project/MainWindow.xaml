@@ -6,27 +6,22 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local="clr-namespace:Starter_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="800" >
+        Title="MainWindow" Height="500" Width="800" WindowStartupLocation="CenterScreen" >
     <Grid Background="LightGray">
         <Viewbox
-    Width="358"
-    Stretch="Fill"
-    StretchDirection="Both" Margin="100,0,100,148">
-            <Calendar Name="Calender1" Height="168" SnapsToDevicePixels="True" Width="190" Foreground="Black" Background="LightBlue" BorderBrush="LightGray" BorderThickness="3" />
+            Width="358"
+            Stretch="Fill"
+            StretchDirection="Both" Margin="100,0,100,148">
+            <Calendar Name="Calender1" Height="168" SnapsToDevicePixels="True" Width="190" Foreground="Black" Background="LightBlue" BorderBrush="LightGray" BorderThickness="3"/>
         </Viewbox>
-        <Button x:Name="Button1" Content="Set Background" HorizontalAlignment="Left" Margin="53,48,0,0" VerticalAlignment="Top" Width="120" Click="Button1_Click_1" Background="WhiteSmoke" Foreground="Black"/>
-        <Button x:Name="Clear_Background" Content="Reset Calendar" HorizontalAlignment="Left" Margin="53,73,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" Background="WhiteSmoke" Foreground="Black"/>
-        <TextBox x:Name="textbox1" HorizontalAlignment="Left"  Margin="10,10,0,0" Text="File path" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" TextChanged="TextBox_TextChanged" Height="33" />
+        <Button x:Name="Button1" Content="Set Background" HorizontalAlignment="Left" Margin="53,53,0,0" VerticalAlignment="Top" Width="120" Click="Button1_Click_1" Background="WhiteSmoke" Foreground="Black"/>
+        <Button x:Name="Clear_Background" Content="Reset Calendar" HorizontalAlignment="Left" Margin="53,78,0,0" VerticalAlignment="Top" Width="120" Click="Button_Click" Background="WhiteSmoke" Foreground="Black"/>
+        <TextBox x:Name="textbox1" HorizontalAlignment="Left"  Margin="10,15,0,0" Text="File path" TextWrapping="Wrap" VerticalAlignment="Top" Width="206" TextChanged="TextBox_TextChanged" Height="33"/>
         <TextBlock x:Name="Time" HorizontalAlignment="Left" Margin="10,434,0,0" TextWrapping="Wrap"  VerticalAlignment="Top"/>
-        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="608,58,0,0" TextWrapping="Wrap" Text="DD" VerticalAlignment="Top" Width="33"/>
-        <Button x:Name="ButtonMonth" Content="Month" HorizontalAlignment="Left" Margin="641,76,0,0" VerticalAlignment="Top" Click="ButtonMonth_Click" Height="23"/>
-        <Button x:Name="Buttonyear" Content="Year" HorizontalAlignment="Left" Margin="680,76,0,0" VerticalAlignment="Top" Click="Buttonyear_Click" Width="40" Height="22"/>
-        <Button x:Name="ButtonDay" Content="Day" HorizontalAlignment="Left" Margin="608,76,0,0" VerticalAlignment="Top" Click="day_Click" Width="33" Height="23"/>
-        <TextBlock HorizontalAlignment="Left" Margin="611,19,0,0" TextWrapping="Wrap" Text="SET EVENTS" VerticalAlignment="Top" FontSize="20" Width="189" Height="47"/>
-        <TextBox x:Name="textbox3" HorizontalAlignment="Left" Margin="641,58,0,0" TextWrapping="Wrap" Text="MM" VerticalAlignment="Top" Width="39" Height="18"/>
-        <TextBox x:Name="textbox4" HorizontalAlignment="Left" Margin="680,57,0,0" TextWrapping="Wrap" Text="YYYY" VerticalAlignment="Top" Width="40"/>
-        <Button x:Name="ConfirmEvent" Content="Confirm Event" HorizontalAlignment="Left" Margin="608,98,0,0" VerticalAlignment="Top" Width="112" Click="ConfirmEvent_Click_1"/>
-
-
+        <TextBox x:Name="textbox2" HorizontalAlignment="Left" Margin="608,58,0,0" Text="DD" TextWrapping="Wrap" VerticalAlignment="Top" Width="33" TextChanged="textbox2_TextChanged"/>
+        <TextBlock HorizontalAlignment="Left" Margin="611,10,0,0" TextWrapping="Wrap" Text="SET DATES" VerticalAlignment="Top" FontSize="20" Width="189" Height="34"/>
+        <TextBox x:Name="textbox3" HorizontalAlignment="Left" Margin="641,58,0,0" Text="MM" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" Height="18" TextChanged="textbox3_TextChanged"/>
+        <TextBox x:Name="textbox4" HorizontalAlignment="Left" Margin="680,58,0,0" Text="YYYY" TextWrapping="Wrap"  VerticalAlignment="Top" Width="40" Height="18" TextChanged="textbox4_TextChanged"/>
+        <Button x:Name="ConfirmEvent" Content="Confirm Event" HorizontalAlignment="Left" Margin="608,81,0,0" VerticalAlignment="Top" Width="112" Click="ConfirmEvent_Click_1"/>
     </Grid>
 </Window>

@@ -42,11 +42,24 @@ namespace Starter_Project
 
         }
 
-
-
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
+            textbox1.GotFocus += Textbox1_GotFocus;
+            textbox1.LostFocus += Textbox1_LostFocus;
+        }
 
+        private void Textbox1_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if(textbox1.Text == "")
+            {
+                textbox1.Text = "File path";
+            }
+        }
+
+        private void Textbox1_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textbox1.GotFocus -= Textbox1_GotFocus;
+            textbox1.Clear();
         }
 
         private void Button1_Click_1(object sender, RoutedEventArgs e)
@@ -73,6 +86,40 @@ namespace Starter_Project
 
         private void ConfirmEvent_Click_1(object sender, RoutedEventArgs e)
         {
+            int num1;
+            bool canConvert = int.TryParse(textbox2.Text, out num1);
+            if(canConvert == true)
+            {
+                day = Convert.ToInt32(textbox2.Text);
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid day");
+                return;
+            }
+
+            canConvert = int.TryParse(textbox3.Text, out num1);
+            if (canConvert == true)
+            {
+                month = Convert.ToInt32(textbox3.Text);
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid month");
+                return;
+            }
+
+            canConvert = int.TryParse(textbox4.Text, out num1);
+            if (canConvert == true)
+            {
+                year = Convert.ToInt32(textbox4.Text);
+            }
+            else
+            {
+                MessageBox.Show("Please enter valid year");
+                return;
+            }
+
             int i, j;
             int count = 0;
             DateTime[] events = new DateTime[200];
@@ -96,22 +143,63 @@ namespace Starter_Project
             }
         }
 
-        private void day_Click(object sender, RoutedEventArgs e)
+        private void textbox2_TextChanged(object sender, TextChangedEventArgs e)
         {
-            day = Convert.ToInt32(textbox2.Text);
+            textbox2.GotFocus += textbox2_GotFocus;
+            textbox2.LostFocus += textbox2_LostFocus;
         }
 
-        private void ButtonMonth_Click(object sender, RoutedEventArgs e)
+        private void textbox2_LostFocus(object sender, RoutedEventArgs e)
         {
-            month = Convert.ToInt32(textbox3.Text);
+            if (textbox2.Text == "")
+            {
+                textbox2.Text = "DD";
+            }
         }
 
-        private void Buttonyear_Click(object sender, RoutedEventArgs e)
+        private void textbox2_GotFocus(object sender, RoutedEventArgs e)
         {
-            year = Convert.ToInt32(textbox4.Text);
+            textbox2.GotFocus -= textbox2_GotFocus;
+            textbox2.Clear();
         }
 
+        private void textbox3_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textbox3.GotFocus += textbox3_GotFocus;
+            textbox3.LostFocus += textbox3_LostFocus;
+        }
 
+        private void textbox3_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textbox3.Text == "")
+            {
+                textbox3.Text = "MM";
+            }
+        }
+
+        private void textbox3_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textbox3.GotFocus -= textbox3_GotFocus;
+            textbox3.Clear();
+        }
+        private void textbox4_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            textbox4.GotFocus += textbox4_GotFocus;
+            textbox4.LostFocus += textbox4_LostFocus;
+        }
+
+        private void textbox4_LostFocus(object sender, RoutedEventArgs e)
+        {
+            if (textbox4.Text == "")
+            {
+                textbox4.Text = "YYYY";
+            }
+        }
+
+        private void textbox4_GotFocus(object sender, RoutedEventArgs e)
+        {
+            textbox4.GotFocus -= textbox4_GotFocus;
+            textbox4.Clear();
+        }
     }
 }
-
