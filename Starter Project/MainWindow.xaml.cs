@@ -16,6 +16,8 @@ using System.IO;
 using System.Globalization;
 using System.Windows.Threading;
 
+
+
 namespace Starter_Project
 {
     /// <summary>
@@ -23,18 +25,21 @@ namespace Starter_Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        int day;
+        int year;
+        int month;
+        DateTime timer = DateTime.Now;
 
-        public int MyValue { get; set; }
         public MainWindow()
         {
             InitializeComponent();
-            DataContext = this;
 
             DispatcherTimer timer = new DispatcherTimer(new TimeSpan(0, 0, 1), DispatcherPriority.Normal, delegate
             {
                 this.Time.Text = DateTime.Now.ToString("h:mm:ss:tt");
             },
             this.Dispatcher);
+
         }
 
 
@@ -66,10 +71,47 @@ namespace Starter_Project
             Calender1.Background = Brushes.White;
         }
 
-        private void Add_Event_Click(object sender, RoutedEventArgs e)
+        private void ConfirmEvent_Click_1(object sender, RoutedEventArgs e)
         {
-            Window1 secondWindow = new Window1();
-            secondWindow.Show();
+            int i, j;
+            int count = 0;
+            DateTime[] events = new DateTime[200];
+            Calender1.BlackoutDates.Add(new CalendarDateRange(new DateTime(year, month, day)));
+            for (i = 0; i < Calender1.BlackoutDates.Count(); i++)
+            {
+
+                events[i] = new DateTime(year, month, day);
+            }
+
+            if (Calender1.BlackoutDates.Contains(timer))
+            {
+                MessageBox.Show("Your event is Today!");
+                for (j = 0; j < i; j++) {
+                    if(events[j] != timer)
+                    {
+                        count++;
+                    }
+                }
+                Calender1.BlackoutDates.RemoveAt(count - 1);
+            }
         }
+
+        private void day_Click(object sender, RoutedEventArgs e)
+        {
+            day = Convert.ToInt32(textbox2.Text);
+        }
+
+        private void ButtonMonth_Click(object sender, RoutedEventArgs e)
+        {
+            month = Convert.ToInt32(textbox3.Text);
+        }
+
+        private void Buttonyear_Click(object sender, RoutedEventArgs e)
+        {
+            year = Convert.ToInt32(textbox4.Text);
+        }
+
+
     }
 }
+
