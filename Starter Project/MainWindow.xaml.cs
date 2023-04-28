@@ -64,11 +64,14 @@ namespace Starter_Project
 
         private void Button1_Click_1(object sender, RoutedEventArgs e)
         {
-            String filename = textbox1.Text;
-            if (File.Exists(filename))
-            {
-                BitmapImage theImage = new BitmapImage
-            (new Uri(filename, UriKind.Relative));
+            string filename = textbox1.Text;
+            string newName = filename.Remove(0, 1);
+            int j = newName.Length;
+            string filePath = newName.Remove(j - 1, 1);
+
+            if (File.Exists(filePath))
+            {                
+                BitmapImage theImage = new BitmapImage(new Uri(filePath, UriKind.Relative));
 
                 ImageBrush myImageBrush = new ImageBrush(theImage);
                 Calender1.Background = myImageBrush;
