@@ -23,5 +23,6 @@
         <TextBox x:Name="textbox3" HorizontalAlignment="Left" Margin="641,58,0,0" Text="MM" TextWrapping="Wrap" VerticalAlignment="Top" Width="39" Height="18" TextChanged="textbox3_TextChanged"/>
         <TextBox x:Name="textbox4" HorizontalAlignment="Left" Margin="680,58,0,0" Text="YYYY" TextWrapping="Wrap"  VerticalAlignment="Top" Width="40" Height="18" TextChanged="textbox4_TextChanged"/>
         <Button x:Name="ConfirmEvent" Content="Confirm Event" HorizontalAlignment="Left" Margin="608,81,0,0" VerticalAlignment="Top" Width="112" Click="ConfirmEvent_Click_1"/>
+        <Button Content="Remove Event" HorizontalAlignment="Left" Margin="611,106,0,0" VerticalAlignment="Top" Click="Button_Click_1" Width="109"/>
     </Grid>
 </Window>

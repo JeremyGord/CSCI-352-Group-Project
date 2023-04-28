@@ -201,5 +201,14 @@ namespace Starter_Project
             textbox4.GotFocus -= textbox4_GotFocus;
             textbox4.Clear();
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            if(Calender1.BlackoutDates.Count > 0)
+            {
+                int i = Calender1.BlackoutDates.Count();
+                Calender1.BlackoutDates.RemoveAt(i - 1);
+            }
+        }
     }
 }
