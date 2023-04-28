@@ -65,13 +65,20 @@ namespace Starter_Project
         private void Button1_Click_1(object sender, RoutedEventArgs e)
         {
             string filename = textbox1.Text;
-            string newName = filename.Remove(0, 1);
-            int j = newName.Length;
-            string filePath = newName.Remove(j - 1, 1);
 
-            if (File.Exists(filePath))
+            if(filename.ElementAt(filename.Length - 1) == '"')
+            {
+                filename = filename.Remove(filename.Length - 1, 1);
+
+                if (filename.ElementAt(0) == '"')
+                {
+                    filename = filename.Remove(0, 1);
+                }
+            }
+
+            if (File.Exists(filename))
             {                
-                BitmapImage theImage = new BitmapImage(new Uri(filePath, UriKind.Relative));
+                BitmapImage theImage = new BitmapImage(new Uri(filename, UriKind.Relative));
 
                 ImageBrush myImageBrush = new ImageBrush(theImage);
                 Calender1.Background = myImageBrush;
@@ -90,6 +97,7 @@ namespace Starter_Project
         private void ConfirmEvent_Click_1(object sender, RoutedEventArgs e)
         {
             int num1;
+
             bool canConvert = int.TryParse(textbox2.Text, out num1);
             if(canConvert == true)
             {
@@ -127,15 +135,16 @@ namespace Starter_Project
             int count = 0;
             DateTime[] events = new DateTime[200];
             Calender1.BlackoutDates.Add(new CalendarDateRange(new DateTime(year, month, day)));
+
             for (i = 0; i < Calender1.BlackoutDates.Count(); i++)
             {
-
                 events[i] = new DateTime(year, month, day);
             }
 
             if (Calender1.BlackoutDates.Contains(timer))
             {
                 MessageBox.Show("Your event is Today!");
+
                 for (j = 0; j < i; j++) {
                     if(events[j] != timer)
                     {
@@ -185,6 +194,7 @@ namespace Starter_Project
             textbox3.GotFocus -= textbox3_GotFocus;
             textbox3.Clear();
         }
+
         private void textbox4_TextChanged(object sender, TextChangedEventArgs e)
         {
             textbox4.GotFocus += textbox4_GotFocus;
