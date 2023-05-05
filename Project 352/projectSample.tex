@@ -152,51 +152,38 @@
 }
 \IEEEtitleabstractindextext{%
 \begin{abstract}
-Our group project is a calender application that runs in the background. Some of the functions are notifying the user of events, importing and exporting user profiles and customizing the user experience with pictures. The target audience are users that want more freedom from their calendar application. 
+Our group project is a calender application. Some of the functions are notifying the user of events and customizing the user experience with pictures. The target audience are users that want more freedom from their calendar application. 
 \end{abstract}
-
 }
-
 
 % make the title area
 \maketitle
-
-
-
 \IEEEdisplaynontitleabstractindextext
-
 \IEEEpeerreviewmaketitle
 
-
-
 \section{Introduction}
-
-Our group project is a calender application, it will be built in a C\# WPF application that runs in the background. Some of the functions are notifying the user of events, view historic information and customizing the user experience with pictures. We are targeting individuals who want the ability to customize, export, import and set specific day/month/year/time notifications. 
-We want to give the user a calendar application that better then what is offered currently.
+Our group project is a calender application, it will be built as a C\# WPF application. Some of the functions are notifying the user of events and customizing the user experience with pictures. We are targeting individuals who want the ability to customize, export, import and set specific day/month/year/time notifications. 
+We want to give the user a calendar application that better then what is offered currently from calendly or canvas.
 
 \subsection{Background}
 We decided on this project because we do not have much experience in C\#. We also felt we could improve on the traditional calender application providing additional freedom and features. Providing features like viewing historic information and customizing backgrounds with user pictures. A calender application sounded like a project that could be fun, challenging and a worthwhile semester long project.
 
 \subsection{Impacts}
-
-The project is geared towards a general audience. Our application is appealing to that audience because of the ability to view historic information, customize the look of the applications background, set custom notifications. It may have a small but positive effect on the end user helping manage and organize life events.
+The project is geared towards a general audience. Our application is appealing to that audience because of the ability to customize the look of the applications background and set custom notifications. It may have a small but positive effect on the end user helping manage and organize life events.
 
 \subsection{Challenges}
+The layout of the GUI seems daunting since some months have more days than others. We plan to take inspiration from the numerous calender applications that are already in the wild. While also improving on the GUI layout making it more user friendly and intuitive.
 
-The layout of the GUI seems daunting since some months have more days than others. We plan to take inspiration from the numerous calender application that are already in the wild. While also improving on the GUI layout making it more user friendly and intuitive.
-
-Adjusting the GUI for events like leap years. - We plan on using already built time/date functions to account for this.
-
+One challenge we encountered early on was changing the background of the calendar. We eventually overcame that challenge by searching online forums and other sources of information. Another challenge was setting the dates for notifications. The GUI is a still a challenge to make it appealing and modern looking.
 
 \section{Scope}
-The app will display the current date and time when first opened. Let the user change the date and set a notification on that date at a specific time. The user should be able to set the background of the app to a designated picture format. The app should have important holidays and dates displayed. 
+The app will display the current date and time when first opened. Let the user change the date and set a notification on that date at a specific time. The user is be able to set the background of the app to a designated picture format. 
 
-\subsubsection{Stretch-Goals}
-Export a user profile to be imported later into the same or different calender application.
-Adding weather to be displayed in the GUI of the application.
+%\subsubsection{Stretch-Goals}
+The stretch goals are to export a user profile to be imported later into the same or different calender application and adding weather to be displayed in the GUI of the application.
 
 \subsection{Requirements}
-The functional and non-functional requirements were gathered based upon what the program would need to be considered complete.
+The functional and non-functional requirements were gathered based upon what the program would need to be considered complete. We decided early on that the functional requirements should put our calendar on functional parity with other existing calendars. So we minimally came up with this list.
 
 \subsubsection{Functional}
 \begin{itemize}
@@ -208,29 +195,24 @@ The functional and non-functional requirements were gathered based upon what the
 
 \subsubsection{Non-Functional}
 \begin{itemize}
-\item User saved notifications should be encoded to protect user data.
+%\item User saved notifications should be encoded to protect user data.
+\item The calendar can run in the background.
 \end{itemize}
 
 \subsection{Use Cases}
-
-\ref{tab:useCaseIndex}.
-
-
-
+%\ref{tab:useCaseIndex}
 
 \begin{table}
 \centering
 \begin{tabular}{|c|c|c|c|c|}
 \hline
-Use Case ID & Use Case Name & Primary Actor & Complexity & Priority \\
-\hline \hline
-1 & Set a notification & User & Med & 1\\
+Use Case ID & Use Case Name & Primary Actor & Complexity & Priority\\
 \hline
+1 & Set a notification & User & Med & 1\\
 \hline
 2 & remove or change a set notification & User & Med & 1\\
 \hline
 3 & Change calender background & User & Low & 1\\
-\hline
 \hline
 4 & View historic information & User & Low & 1\\
 \hline
@@ -240,9 +222,8 @@ Use Case ID & Use Case Name & Primary Actor & Complexity & Priority \\
 \label{tab:useCaseIndex}
 \end{table}
 
-
 \begin{itemize}
-\item[Use Case Number:] 1-2
+\item[Use Case Number:] 1
 \item[Use Case Name:] Set a notification
 \item[Description:] The user has a specific date and time they with for a notification to appear on. The user navigates to the desired date. Selects the date and then specifies a time where the program saves that data and creates a notification.
 \end{itemize}
@@ -254,9 +235,13 @@ Use Case ID & Use Case Name & Primary Actor & Complexity & Priority \\
 \item[Termination Outcome:] The user has a notification set on that time and day.
 \end{enumerate}
 
-
-
 Alternative: Notification has already been created
+\begin{itemize}
+\item[Use Case Number:]  2
+\item[Use Case Name:] Cancel or Modify notification
+\item[Description:] The user has a date and time that they either wish to reschedule or cancel. The user navigates to the date on the calendar. Then the user selects the notification.
+\end{itemize}
+
 \begin{enumerate}
 \item User navigates to the same date
 \item User selects the date
@@ -268,8 +253,7 @@ Alternative: Notification has already been created
 \begin{itemize}
 \item[Use Case Number:]3
 \item[Use Case Name:] Change calender background
-\item[Description:] The user desires to change the background of the calender 
-
+\item[Description:] The user desires to change the background of the calender
 \end{itemize}
 
 \begin{enumerate}
@@ -283,7 +267,6 @@ Alternative: Notification has already been created
 \item[Use Case Number:]4
 \item[Use Case Name:] View historic information
 \item[Description:] A user desires to view specific historic information on a date.
-
 \end{itemize}
 
 \begin{enumerate}
@@ -292,38 +275,43 @@ Alternative: Notification has already been created
 \item[Termination Outcome:] The historic information is displayed to the user.
 \end{enumerate}
 
+\subsection{Interface}
+\begin{figure} [ht!]
+\includegraphics[scale=0.6]{gui.png}
+\caption{GUI of application}
+\label{GUI}
+\end{figure}
 
-
-\subsection{Interface Mockups}
-\includegraphics[height=250px, width=350px]{gui.png}
-\label{GUI Mockup}
-
-
-
+Once the application is opened the user is greeted to a pleasant blue calendar displaying the current date. On the left is are the controls to change the background of the calendar and on the right are the controls to set an event.
 
 \section{Project Timeline}
-\includegraphics[height=250px, width=350px]{Roadmap.png}
+\begin{figure} [ht!]
+\includegraphics[scale=0.65]{Roadmap.png}
+\caption{Project timeline}
+\label{timeline}
+\end{figure}
+
+The above figure is the approximate timeline that our project followed. We followed the waterfall software development life cycle. Starting with requirements, we decided on what would define done for our project and what we would like to accomplish. Then we progressed to design, where we considered design patterns and the general structure of the program. Then came implementation, we encountered the most difficulties of the project in this phase. We eventually over came them and prevailed. Then we progressed to verification, this phase was shorter than planned as is common in waterfall. Now we are in the maintenance phase.
 
 \section{Project Structure}
-The way we designed the project so that the main screen where the user sees all their current events and notifications is clean. We tried implementing new windows for settings and events but could not get it working. We laid out all the functionality on the main window in a clean straitforward way for the user. 
+The way we designed the project so that where the user sees all their current events and notifications is clean. We tried implementing new windows for settings and events but could not get it working. We laid out all the functionality on the main window in a clean and strait forward way for the user. 
 
 \subsection{UML Outline}
-We chose the decorator pattern as we already found a calender object we could just decorate to help meet one of our base goals. We chose an observer pattern so that while the calender is not actively running the notifications can be checked to see if the set time has passed.  
+We chose the decorator pattern as we already found a calender object we could just decorate to help meet one of our base goals. We chose the observer pattern so that while the calender is not actively running the notifications can be checked to see if the set time has passed. Our concrete observers are the calendar blackout dates objects and the notification objects.
 For example, see Figure \ref{UML of Calender Project}.
 
 \begin{figure}[ht!]
-\includegraphics[scale=1]{Uml Format.png}
+\includegraphics[scale=0.8]{Uml Format.png}
 \caption{Uml outline of our Calender project}
 \label{UML of Calender Project}
 \end{figure}
 
-
 \subsection{Design Patterns Used}
-We are implementing the observer and decorator patterns. The decorator pattern to add new functionality to the calendar object we are using. The observer pattern to notify the userr when a set event is happening.
+We are implementing the observer and decorator patterns. The decorator pattern to add new functionality to the calendar object we are using. The observer pattern to notify the user when a set event is happening. In regards to \ref{UML of Calender Project} the decorator pattern can be seen in the center of the figure and the observer can be seen around the outer edge. The two patterns both utilize the calendar object but they do not interfere with each other. 
 
 
 \section{Results}
-We implemented use cases 1, 2 and 3 the user can set the background of the calendar with an image using the images file path. The user can set a notification and remove a set notification. We did not finish implementing use case 4. Historic information and holidays are not in the application.
+We implemented use cases 1, 2 and 3. The user can set the background of the calendar with an image using the images file path. The user can set a notification and remove a set notification. We did not finish implementing use case 4. Historic information and holidays are not in the current version of the application.
 
 
 \subsection{Future Work}
